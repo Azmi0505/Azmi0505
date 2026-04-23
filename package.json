@@ -1,0 +1,16 @@
+{
+  "name": "azmi0505",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Initial Node.js project scaffold",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test",
+    "lint": "node --check src/index.js tests/index.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
