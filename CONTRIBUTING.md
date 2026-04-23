@@ -1,17 +1,20 @@
 # Contributing
 
-## Branching
+## Development workflow
 
-- Work from short-lived branches off the main collaboration branch.
-- Keep pull requests focused and small.
+1. Create a short-lived branch.
+2. Implement changes with tests.
+3. Run local checks before opening PR:
 
-## Commit guidelines
-
-- Use clear, imperative commit messages.
-- Include context for non-obvious changes.
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
 
 ## Pull request checklist
 
-1. Ensure tests pass locally (`npm test`).
-2. Ensure lint command passes (`npm run lint`).
-3. Update docs when behavior or structure changes.
+- Keep PR scope focused.
+- Add or update tests for behavior changes.
+- Update docs (`README`, `docs/architecture.md`) when needed.

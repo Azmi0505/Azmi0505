@@ -1,17 +1,20 @@
 # Architecture Notes
 
-## Current state
+## Current baseline
 
-This is an initial Node.js scaffold intended as a base for future service development.
+- Runtime: Node.js + Express
+- Language: TypeScript (strict mode)
+- Validation: ESLint + TypeScript typecheck + Vitest
+- CI: GitHub Actions matrix for Node 20 and 22
 
-## Layers (planned)
+## Layers
 
-- `src/` for runtime code.
-- `tests/` for unit and integration tests.
-- `docs/` for engineering decisions and architecture records.
+- `src/app.ts`: app composition and route registration
+- `src/server.ts`: process/bootstrap entrypoint
+- `tests/`: endpoint and module-level tests
 
-## Next additions
+## Next recommended additions
 
-- Configuration module
-- Logging and error-handling conventions
-- API layer and route/module boundaries
+- Centralized config loader (env parsing and validation)
+- Error handling middleware and request logging
+- Route versioning and module boundaries (`src/modules/*`)

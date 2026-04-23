@@ -1,6 +1,6 @@
-# Azmi0505 Node.js Starter
+# Azmi0505 TypeScript Service Starter
 
-Starter repository for a Node.js service with basic structure, test setup, and CI.
+Production-oriented Node.js + TypeScript starter with Express health endpoint, tests, linting, typechecking, and CI.
 
 ## Prerequisites
 
@@ -12,27 +12,31 @@ Starter repository for a Node.js service with basic structure, test setup, and C
 npm install
 ```
 
-## Run
+## Commands
 
 ```bash
-npm start
+npm run dev        # start dev server with watch mode
+npm run lint       # run ESLint
+npm run typecheck  # run TypeScript checker
+npm test           # run Vitest suite
+npm run build      # compile TypeScript to dist/
+npm start          # run compiled server
 ```
 
-## Test
+## API
 
-```bash
-npm test
+### `GET /health`
+
+Returns:
+
+```json
+{ "status": "ok" }
 ```
 
-## Lint (syntax check)
+## Structure
 
-```bash
-npm run lint
-```
-
-## Project structure
-
-- `src/` application source code
-- `tests/` test files
-- `docs/` project documentation
-- `.github/workflows/` CI pipelines
+- `src/app.ts` Express app and routes
+- `src/server.ts` runtime server entrypoint
+- `tests/` integration/unit tests
+- `.github/workflows/ci.yml` CI checks
+- `docs/architecture.md` architecture notes
